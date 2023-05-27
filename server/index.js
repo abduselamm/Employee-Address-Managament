@@ -10,8 +10,7 @@ app.use(cors());
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use("/employees", employeeRouter);
-const CONNECTION_URL =
-  "mongodb+srv://hubo:Java1234@cluster0.apydubp.mongodb.net/?retryWrites=true&w=majority";
+const CONNECTION_URL = mongo_credential;
 const PORT = process.env.PORT || 5000;
 
 mongoose
